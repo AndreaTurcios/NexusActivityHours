@@ -1,54 +1,75 @@
-﻿
-
-
-<%@ Page Title="About" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="NexusActivityHours.About" %>
+﻿<%@ Page Title="Proyectos" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="NexusActivityHours.About" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+ <div class="container">
+        <div class="row">
+            <div class="col-12 text-center" id="Titulo1">
+                <h1 class="center">Gestión de clientes</h1>
+            </div>
+        </div>
 
-    <h2><%: Title %>.</h2>
-    <h3>Your application description page.</h3>
-    <p>Use this area to provide additional information.</p>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#clienteModal">
+  Agregar  +
+</button>
+<div class="modal fade" id="clienteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-     <div class="container">
-            <div class="row">
-                <div class="col-lg-9">
-                  <div class="card">
-                    <div class="card-content">
-                      <span class="card-title">Contáctanos</span>
-                      <span><i class="fas fa-user-alt"></i>Andrea Turcios</span><br/>
-                      <span><i class="fas fa-mobile"></i> 7127-6891</span> <br/>
-                      <span><i class="fas fa-phone-alt"></i> 2216-5389</span> <br/>
-                      <span><i class="fas fa-envelope-square"></i> farmastuff442@gmail.com</span> <br/>
-                    </div>
-                    <div class="card-action">
-                    <form action="">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                        </div>
-                            <div class="input-field col s6">
-                               <input id="first_name" type="text" class="validate">
-                               <label for="first_name">Nombre</label>
-                        </div>
-                              </div>
-                        <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                        </div>
-                        <div class="input-field col s6">
-                          <input id="email" type="text" class="validate">
-                          <label for="email">Correo</label>
-                        </div>
+     <br>
+        <div class="row">
+                    <div class="col-6">
+                        <form id="save-form" method="post" autocomplete="off">
+                            <input type="number" id="id_cliente" name="id_cliente" class="hide">
+                            <div class="form-group">
+                                <label for="cliente">Nombre cliente:</label>
+                                <input type="text" class="form-control" id="nombrecliente" name="nombrecliente" placeholder="Nombre...">
+                                <label for="telcliente">Teléfono cliente:</label>
+                                <input type="text" class="form-control" id="telefonocliente" name="telefonocliente" placeholder="Teléfono...">
+                            
                             </div>
-                            <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                        </div>
-                          <textarea name="" cols="30" rows="10" placeholder="Deja tu opinión sobre FarmaStuff en este espacio o alguna queja..." class="form-control"></textarea>
-                        </div>
-                        <br>
-                          <center><button type="reset" style="background-color: #e57373;" class="btn btn-primary btn-block valign-wrapper">Enviar</button></center>
+                            <div class="form-group">
+                                <label for="descripcion_categoria">Descripción:</label>
+                                <input class="form-control" id="descripcion_categoria" name="descripcion_categoria" rows="3">
+                            </div>
+                            <button class="btn btn-success mt-2" type="submit">Guardar</button>
+                            <a href="" class="btn" target="_blank">Generar Reporte</a>
                         </form>
                     </div>
-                  </div>
                 </div>
-              </div>
-
+        <br>  
+        <div class="row">
+            <div class="table-responsive" class="col scroll">
+                <table id="data-table" class="table table-bordered">
+                    <thead class="table-info">
+                        <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Teléfono</th>
+                            <th scope="col">Dirección</th>
+                            <th scope="col">Correo</th>
+                            <th scope="col">Cantidad proyectos</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody-rows">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+       </div> 
+<br>
 </asp:Content>

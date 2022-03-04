@@ -1,22 +1,36 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="NexusActivityHours.SiteMaster" %>
-
 <!DOCTYPE html>
-
-<html lang="en">
+<html lang="es">
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> - NexusEnterprise </title>
-
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
-
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
 </head>
+
 <body>
+    <div class="containtercentrado1">
+            <div class="containercentrado">
+                <br>
+           <a href="Home"><img src="../Resources/ActivityHoursLogo.png" width="70" height="60" class="center"></a>
+    </div>
+    <br>
+            <nav>
+                <div class="menu">
+                    <ul>
+                        <li><a href="/About">PROYECTOS</a></li>
+                        <li><a href="/Contact">CLIENTES</a></li>
+                        <li><a href="/Contact">ACTIVIDADES</a></li>
+                        <li><a href="/Contact">COLABORADORES</a></li>
+                        <li><a href="/Contact">CONTROL COLABORADORES</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
@@ -34,28 +48,7 @@
                 <asp:ScriptReference Name="WebFormsBundle" />
             </Scripts>
         </asp:ScriptManager>
-
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" runat="server" href="~/">NexusActivityHours</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/About">Proyectos</a></li>
-                        <li><a runat="server" href="~/Contact">Clientes</a></li>
-                        <li><a runat="server" href="~/Contact">Actividades</a></li>
-                        <li><a runat="server" href="~/Contact">Colaborador</a></li>
-                        <li><a runat="server" href="~/Contact">Control Colaborador</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <br>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
@@ -64,7 +57,6 @@
                 <p>&copy; <%: DateTime.Now.Year %> - NexusActivityHours</p>
             </footer>
         </div>
-
     </form>
 </body>
 </html>

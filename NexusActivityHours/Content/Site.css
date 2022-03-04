@@ -1,6 +1,7 @@
 ﻿/* Move down content because we have a fixed navbar that is 50px tall */
 body {
-    padding-top: 50px;
+    margin: 0;
+    padding: 0;
     padding-bottom: 20px;
 }
 
@@ -18,7 +19,6 @@ textarea {
     max-width: 280px;
 }
 
-
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .jumbotron {
@@ -29,3 +29,113 @@ textarea {
         padding: 0;
     }
 }
+#Titulo1 {
+    background-color: #4BADB6;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
+.botonAnim {
+    border-color: #ffa420;
+    border-radius: 0;
+    color: #ffa420;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    -webkit-transition: color 150ms ease-in-out;
+    transition: color 150ms ease-in-out;
+}
+
+    .botonAnim:after {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        width: 0;
+        height: 100%;
+        background: rgb(175, 218, 219);
+        z-index: -1;
+        -webkit-transition: width 150ms ease-in-out;
+        transition: width 150ms ease-in-out;
+    }
+
+    .botonAnim:hover {
+        color: #ffa420;
+    }
+
+        .botonAnim:hover:after {
+            width: 110%;
+        }
+
+
+#fontmen {
+    font-family: "Oswald", sans-serif;
+}
+
+
+.containercentrado {
+    text-align: center;
+}
+
+.containercentrado1 {
+    text-align: center;
+}
+
+
+.menu {
+    animation: menu 1s ease-in-out;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 0;
+    width: 100%;
+    z-index: 100;
+    background: rgb(175, 218, 219);
+    padding: 0px;
+}
+
+@keyframes menu {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+}
+
+.menu ul{
+    display: flex;
+    height: 100%;
+    margin: 0px;
+}
+
+    .menu ul li {
+        margin-right: 0px;
+        padding: 30px;
+        list-style: none;
+        height: 100%;
+        transition: 0.5s ease-in-out;
+    }
+
+        .menu ul li a {
+            font-size: 13px;
+            letter-spacing: 3px;
+            font-family: Verdana;
+            text-decoration: none;
+            list-style: none;
+            color: rgb(255, 255, 255);
+            transition: 0.5s ease-in-out;
+        }
+
+        .menu ul li:hover a {
+            text-decoration: underline;
+            letter-spacing: 3.5px;
+        }
+        .menu ul li:hover {
+            background: rgb(190, 210, 220);
+            text-decoration: underline;
+
+        }
