@@ -13,20 +13,22 @@
 </head>
 
 <body>
+
     <div class="containtercentrado1">
             <div class="containercentrado">
                 <br>
-           <a href="/Home"><img src="../Resources/ActivityHoursLogo.png" width="70" height="60" class="center"></a>
+           <a href="/Default"><img src="../Resources/ActivityHoursLogo.png" width="70" height="60" class="center"></a>
     </div>
     <br>
             <nav>
                 <div class="menu">
                     <ul>
-                        <li><a href="/Proyectos">PROYECTOS</a></li>
-                        <li><a href="/About">CLIENTES</a></li>
-                        <li><a href="/Actividades">ACTIVIDADES</a></li>
-                        <li><a href="/Contact">COLABORADORES</a></li>
-                        <li><a href="/Contact">CONTROL COLABORADORES</a></li>
+                        <li><a href="/Proyectos">Proyectos</a></li>
+                        <li><a href="/Clientes">Clientes</a></li>
+                        <li><a href="/Actividades">Actividades</a></li>
+                        <li><a href="/Colaboradores">Colaboradores</a></li>
+                        <li><a href="/ControlColaboradores">Control</a></li>
+                        <li><a href="/Login">Login</a></li>
                     </ul>
                 </div>
             </nav>
