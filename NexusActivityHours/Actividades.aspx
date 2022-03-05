@@ -10,7 +10,7 @@
         </div>
          <br />
         <div class="btnModal">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#proyectoModal">
+            <button type="button" class="btn btn-light" data-toggle="modal" data-target="#proyectoModal">
               Agregar  +
             </button>
         </div>
