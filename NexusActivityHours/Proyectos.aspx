@@ -19,7 +19,7 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Gestión de clientes</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Gestión de proyectos</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -31,11 +31,8 @@
                                 <form id="save-form" method="post" autocomplete="off">
                                     <input type="number" id="id_cliente" name="id_cliente" class="hide">
                                     <div class="form-group">
-                                        <label for="cliente">Nombre cliente:</label>
+                                        <label for="cliente">Nombre proyecto:</label>
                                         <input type="text" class="form-control" id="nombrecliente" name="nombrecliente" placeholder="Nombre...">
-                                        <label for="telcliente">Teléfono cliente:</label>
-                                        <input type="text" class="form-control" id="telefonocliente" name="telefonocliente" placeholder="Teléfono...">
-                            
                                     </div>
                                     <button class="btn btn-success mt-2" type="submit">Guardar</button>
                                     <a href="" class="btn" target="_blank">Generar Reporte</a>
@@ -54,23 +51,6 @@
 
  <br>
         
-        <br>  
-        <div class="row">
-            <div class="table-responsive" class="col scroll">
-                <table id="data-table" class="table table-bordered">
-                    <thead class="table-info">
-                        <tr>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Teléfono</th>
-                            <th scope="col">Dirección</th>
-                            <th scope="col">Correo</th>
-                            <th scope="col">Cantidad proyectos</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tbody-rows">
-                    </tbody>
-                </table>
-            </div>
-        </div>
+        
 </div> 
 </asp:Content>

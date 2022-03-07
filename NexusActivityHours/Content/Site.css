@@ -56,14 +56,14 @@ textarea {
         transform: translateX(-50%);
         width: 0;
         height: 100%;
-        background: rgb(175, 218, 219);
+        background: menu;
         z-index: -1;
         -webkit-transition: width 150ms ease-in-out;
         transition: width 150ms ease-in-out;
     }
 
     .botonAnim:hover {
-        color: #ffa420;
+        color: #33353d;
     }
 
         .botonAnim:hover:after {
@@ -460,3 +460,16 @@ ul li a {
     background-color: #737373;
     width: 100%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

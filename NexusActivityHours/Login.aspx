@@ -1,6 +1,7 @@
 ﻿ <%@ Page Title="Login" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="NexusActivityHours.About" %>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
+<script src="../Scripts/WebForms/login.js"></script>
 
   <div class="containerlogin">
     <div class="left">

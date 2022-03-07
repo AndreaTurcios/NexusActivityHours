@@ -35,7 +35,11 @@
                                         <input type="text" class="form-control" id="nombrecliente" name="nombrecliente" placeholder="Nombre...">
                                         <label for="telcliente">Teléfono cliente:</label>
                                         <input type="text" class="form-control" id="telefonocliente" name="telefonocliente" placeholder="Teléfono...">
-                            
+                                        <label for="domicliocliente">Domicilio cliente:</label>
+                                        <input type="text" class="form-control" id="domiciliocliente" name="domiciliocliente" placeholder="Domicilio...">
+                                        <label for="correocliente">Correo cliente:</label>
+                                        <input type="text" class="form-control" id="correocliente" name="correocliente" placeholder="Correo...">
+                                        
                                     </div>
                                     <button class="btn btn-success mt-2" type="submit">Guardar</button>
                                     <a href="" class="btn" target="_blank">Generar Reporte</a>
@@ -60,6 +64,7 @@
                 <table id="data-table" class="table table-bordered">
                     <thead class="table-info">
                         <tr>
+                            <th scope="col">ID</th>
                             <th scope="col">Nombre</th>
                             <th scope="col">Teléfono</th>
                             <th scope="col">Dirección</th>
